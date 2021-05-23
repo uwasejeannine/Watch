@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dital Clock</title>
+    <style type="text/css">
+        body {
+            background: #000;
+        }
+        
+        .tr {
+            color: wheat;
+            position: absolute;
+            font-size: 120px;
+            padding: 200px;
+            position: absolute;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body class="tr">
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var d = new Date();
+            var h = d.getHours();
+            var n = d.getMinutes();
+            var s = d.getSeconds();
+            var session = "AM";
+            var d = h + ":" + n + ":" + s + " " + session;
+            document.getElementById("demo").innerHTML = d;
+            document.getElementById("demo").textContent = d;
+        }
+        myFunction();
+        setInterval(myFunction, 1000);
+    </script>
+</body>
+
+</html>
